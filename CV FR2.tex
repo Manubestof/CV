@@ -1,0 +1,98 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{hyperref} % Ajout du package hyperref
+
+% Configuration des marges
+\geometry{left=0cm,right=0cm,top=1cm,bottom=1cm}
+
+% Couleurs personnalisées
+\definecolor{bleuclair}{RGB}{204, 229, 255}  % Bleu clair pour la section de gauche
+\definecolor{primary}{RGB}{0, 51, 102}       % Couleur principale
+\definecolor{secondary}{RGB}{0, 153, 204}    % Couleur secondaire
+
+% Commandes pour les sections
+\newcommand{\sectioncv}[2]{
+    \vspace{0.5cm}
+    \noindent \textbf{\textcolor{primary}{#1}} \\
+    #2
+}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \fill[bleuclair] (current page.north west) rectangle ([xshift=0.33\paperwidth]current page.south west);
+\end{tikzpicture}
+
+\noindent
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{1cm}
+    % Section de gauche - Fond bleu clair sur toute la page
+    \textbf{Emmanuel Le Hir} \\
+    \vspace{0.3cm}
+    \textbf{Contact} \\
+    5 Rue d'Odessa \\
+    75014 Paris \\
+    \href{mailto:emmanuel@lehir.bzh}{emmanuel@lehir.bzh} \\
+    +33 6 28 91 76 28 \\
+    \vspace{0.3cm}
+    \textbf{Compétences} \\
+    Python, Matlab, R \\
+    SQL, MongoDB \\
+    Microsoft 365 \\
+    Formation PSC1 \\
+    \vspace{0.3cm}
+    \textbf{Langues} \\
+    Anglais : C1 - IELTS \\
+    Espagnol : B2/C1 - Siele \\
+    Français : Langue maternelle \\
+    \vspace{0.3cm}
+    \textbf{Intérêts} \\
+    Football, Randonnées \\
+    Photographie, Cinéma \\
+    Musique classique \\
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+    \vspace{1cm}
+    % Section de droite - Fond blanc
+    \sectioncv{Expérience}{}
+    
+    \textbf{EY \& Associés} \hfill Septembre 2023 - Mars 2024 \\
+    Stage Audit Financier \\
+    \textit{Analyse des mouvements comptables et financiers, intégration d'outils pour faciliter les processus.}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Saint-Gobain} \hfill Avril - Août 2024 \\
+    Stage Data Science \\
+    \textit{Développement d'une bibliothèque Python, automatisation de projets pour accélérer le développement commercial.}
+    
+    \vspace{0.5cm}
+    \sectioncv{Formation}{}
+    
+    \textbf{Ingénieur Civil des Mines} \hfill Depuis 2021 \\
+    Mines de Nancy \\
+    \textit{Génie Industriel, Modélisation Mathématique, Deep Learning.}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Fac de Sciences Économiques de Nancy} \hfill 2022 \\
+    Master Économie de la Transition Énergétique \\
+    \textit{Finance, politiques énergétiques, théorie des jeux.}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Conservatoire Darius Milhaud} \hfill 2005 - 2020 \\
+    \textit{Musique de chambre, Formation musicale et composition.}
+    
+\end{minipage}
+
+\end{document}
